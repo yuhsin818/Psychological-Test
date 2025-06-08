@@ -1,29 +1,39 @@
 'use client';
 
-import MobileFrame from "../layout/MobileFrame";
-import Image from "next/image";
-import titleImg from "@/../public/0.start/title.png";
-import startBtn from "@/../public/0.start/startBtn.png";
-import blurCircle_1 from "@/../public/0.start/blurCircle-1.png";
+import MobileFrame from '@/component/layout/MobileFrame';
+import Image from 'next/image';
+import titleImg from '@/../public/0.start/title.svg';
+import startBtn from '@/../public/0.start/startBtn.png';
+import circle1Img from '@/../public/0.start/blur-circle-1.png';
+import topImg from '@/../public/0.start/instrument-green.png';
+import bottomImg from '@/../public/0.start/piano-green.png';
 
 export default function StartPage({nextStep}) {
 
   return (
     <>
-      <MobileFrame>
-        <div className="w-screen h-screen flex justify-center items-center flex-col gap-[60px] font-bold">
-        <Image className="absolute top-0 -translate-y-1/2" src={blurCircle_1} alt=""/>
-          <Image src={titleImg} width={300} alt=""/>
-          <div className="text-[#B65A0F] px-8 text-[14px] flex-wrap leading-loose tracking-wide">
-            有些人天生酥脆，有些人出爐時就塌了。
-            你努力發酵、翻滾、等待出爐，
-            結果還是變成一坨可頌災難。
-            沒關係，這世界不缺完美麵包，
-            缺的是——像你一樣軟爛卻獨特的存在。
-            現在，就來看看你是什麼等級的失控可頌吧。
+      <MobileFrame bgColor="#AEAC72">
+        <div className='w-[95%] flex justify-center items-center flex-col gap-[30px] bg-[#BAB887] px-3 py-10 rounded-2xl'>
+          <Image className=' absolute top-8 -translate-y-1/2 ' src={topImg} alt='topImg' />
+          {/* <Image src={titleImg} alt='title' /> */}
+          <div className='text-[#FCE3BE] font-[500] text-center text-[30px]'>你是哪一種樂器?</div>
+          <div className='text-[#FCE3BE] font-[500] text-center text-[14px]
+           leading-loose tracking-wide '>
+            有些人天生就像鋼琴，穩定又優雅； <br/>
+            有些人則像小號，熱情而耀眼。 <br/>
+            你努力練習，追求自己的旋律， <br/>
+            不論結果如何，都有屬於你的樂章。<br/>
+            <p className='mt-[20px]'>這世界就像一場盛大的交響樂， </p>
+            而你，會是其中的哪個聲部呢？ <br/>
+            總共有16種樂器等你來探索!
           </div>
-          <Image onClick={nextStep} src={startBtn} width={150}  alt=""/>
-          <Image className="absolute bottom-0 translate-y-1/2" src={blurCircle_1} alt=""/>
+          {/* <Image onClick={nextStep} className='w-[160px]' src={startBtn} alt='startBtn' /> */}
+          <div onClick={nextStep} className='h-[35px] w-[150px] flex justify-center items-center
+           bg-[#FABC63] text-[#FCE3BE] font-bold text-[20px] rounded-3xl 
+           cursor-pointer hover:translate-y-0.5 transition'>
+            START
+          </div>
+          <Image className=' absolute bottom-10 translate-y-1/2 pointer-events-none ' src={bottomImg} alt='bottomImg' />
         </div>
       </MobileFrame>
     </>
