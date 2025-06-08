@@ -139,12 +139,12 @@ export default function ResultPage() {
     <MobileFrame bgColor={getBgColor()[0]}>
       {/* <Image className=' absolute top-8 -translate-y-1/2 ' src={topImg} alt='topImg' /> */}
       <div className='flex flex-col items-center gap-4'>
-        <Image className='w-[90%]' src={resultImage} alt='你的結果' />
+        <Image className='w-[80%]' src={resultImage} alt='你的結果' />
         {/* <div className='text-center text-lg font-bold'>{finalResult}</div> */}
         <div
           style={{ backgroundColor: getBgColor()[1] }}
           className={` w-[80%] rounded-full text-[#FCE3BE] 
-            py-[10px] text-[18px] flex justify-center items-center font-bold 
+            py-[8px] text-[18px] flex justify-center items-center font-bold 
             cursor-pointer hover:translate-y-0.5 transition`}
           onClick={playAgain}
         >

@@ -8,6 +8,7 @@ import circle1Img from '@/../public/0.start/blur-circle-1.png';
 import topImg from '@/../public/0.start/instrument-green.png';
 import bottomImg from '@/../public/0.start/piano-green.png';
 
+
 export default function StartPage({nextStep}) {
 
   return (
@@ -15,7 +16,6 @@ export default function StartPage({nextStep}) {
       <MobileFrame bgColor="#AEAC72">
         <div className='w-[95%] flex justify-center items-center flex-col gap-[30px] bg-[#BAB887] px-3 py-10 rounded-2xl'>
           <Image className=' absolute top-8 -translate-y-1/2 ' src={topImg} alt='topImg' />
-          {/* <Image src={titleImg} alt='title' /> */}
           <div className='text-[#FCE3BE] font-[500] text-center text-[30px]'>你是哪一種樂器?</div>
           <div className='text-[#FCE3BE] font-[500] text-center text-[14px]
            leading-loose tracking-wide '>
@@ -29,9 +29,9 @@ export default function StartPage({nextStep}) {
           </div>
           {/* <Image onClick={nextStep} className='w-[160px]' src={startBtn} alt='startBtn' /> */}
           <div onClick={nextStep} className='h-[35px] w-[150px] flex justify-center items-center
-           bg-[#FABC63] text-[#FCE3BE] font-bold text-[20px] rounded-3xl 
+           bg-[#FABC63] text-[#FCE3BE] font-bold text-[18px] rounded-3xl 
            cursor-pointer hover:translate-y-0.5 transition'>
-            START
+            開始測驗
           </div>
           <Image className=' absolute bottom-10 translate-y-1/2 pointer-events-none ' src={bottomImg} alt='bottomImg' />
         </div>

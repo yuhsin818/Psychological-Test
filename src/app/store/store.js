@@ -52,7 +52,7 @@ const useQuestionStore = create((set) => ({
       options: [
         {title: "靜下心來，找平衡", value: 1 , type: "woodwind"},
         {title: "直接正面迎戰", value: 1, type: "brass"},
-        {title: "稳紮穩打，慢慢磨合", value: 1, type: "string"},
+        {title: "穩扎穩打，慢慢磨合", value: 1, type: "string"},
         {title: "即興發揮，轉換思路", value: 1, type: "percussion"}
       ]
     },
