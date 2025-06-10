@@ -8,11 +8,16 @@ import circle1Img from '@/../public/1.question/blur-circle-1.png';
 import circle2Img from '@/../public/1.question/blur-circle-2.png';
 import topImg from '@/../public/0.start/instrument-green.png';
 // import bottomImg from '@/../public/0.start/piano-green.png';
-import bottomImg1 from '@/../public/1.question/piano-red.png';
-import bottomImg2 from '@/../public/1.question/piano-orange.png';
-import bottomImg3 from '@/../public/1.question/piano-green.png';
-import bottomImg4 from '@/../public/1.question/piano-blue.png';
-import bottomImg5 from '@/../public/1.question/piano-purple.png';
+import bottomImg1 from '@/../public/1.question/bottomImg01.png';
+import bottomImg2 from '@/../public/1.question/bottomImg02.png';
+import bottomImg3 from '@/../public/1.question/bottomImg03.png';
+import bottomImg4 from '@/../public/1.question/bottomImg04.png';
+import bottomImg5 from '@/../public/1.question/bottomImg05.png';
+import bottomImg6 from '@/../public/1.question/bottomImg06.png';
+import bottomImg7 from '@/../public/1.question/bottomImg07.png';
+import bottomImg8 from '@/../public/1.question/bottomImg08.png';
+import bottomImg9 from '@/../public/1.question/bottomImg09.png';
+import bottomImg10 from '@/../public/1.question/bottomImg10.png';
 import topImg1 from '@/../public/1.question/instrument-red.png';
 import topImg2 from '@/../public/1.question/instrument-orange.png';
 import topImg3 from '@/../public/1.question/instrument-green.png';
@@ -68,11 +73,16 @@ export default function QuestionPage({questionIndex, nextStep}) {
   };
 
   const getBottomImg = () => {
-    if (questionIndex == 0 | questionIndex == 5) return bottomImg1;
-    if (questionIndex == 1 | questionIndex == 6) return bottomImg2;
-    if (questionIndex == 2 | questionIndex == 7) return bottomImg3;
-    if (questionIndex == 3 | questionIndex == 8) return bottomImg4;
-    if (questionIndex == 4 | questionIndex == 9) return bottomImg5;
+    if (questionIndex == 0) return bottomImg1;
+    if (questionIndex == 1) return bottomImg2;
+    if (questionIndex == 2) return bottomImg3;
+    if (questionIndex == 3) return bottomImg4;
+    if (questionIndex == 4) return bottomImg5;
+    if (questionIndex == 5) return bottomImg6;
+    if (questionIndex == 6) return bottomImg7;
+    if (questionIndex == 7) return bottomImg8;
+    if (questionIndex == 8) return bottomImg9;
+    if (questionIndex == 9) return bottomImg10;
     return bottomImg3;
   };
   
@@ -140,23 +150,22 @@ export default function QuestionPage({questionIndex, nextStep}) {
     <>
       <MobileFrame bgColor={getBgColor()}>
         
-
-        {/* <Image className=' absolute top-0 -translate-y-1/2 ' src={circle2Img} alt='circle2Img' /> */}
-        <Image className=' absolute top-8 -translate-y-1/2 ' src={topImg} alt='topImg' />
+        <Image className=' absolute top-8 lg:top-5 -translate-y-1/2 ' src={topImg} alt='topImg' />
         
 
 
         <div className='flex flex-col items-center gap-[26px]'>
-          {/* <Image src={q1Up} className='w-[88px]' alt='q1Up' /> */}
-
-          {/* <div className='text-[#90B62A] border-2 border-[#90B62A] rounded-full w-[48px] h-[48px]
-          flex justify-center items-center font-bold text-xl '>
-            Q{questionIndex+1}
-          </div> */}
-          
-          <div 
-            className={`text-center font-bold text-[28px] text-[#FCE3BE] mb-[30px]`}
-          > {questionData.questions[questionIndex+1].title} </div>
+          <div className='w-full flex flex-col lg:flex-row justify-center items-center mb-[25px] gap-3'>
+            <div className='text-[#FFE8C9] bg-[rgba(255,232,201,0.3)] rounded-full w-[50px] h-[50px]
+            flex justify-center items-center font-bold text-xl'>
+              Q{questionIndex+1}
+            </div>
+            
+            <div 
+              className={`text-center font-bold text-[28px] text-[#FCE3BE]`}
+            > {questionData.questions[questionIndex+1].title} </div>
+            
+          </div>
 
 
 
@@ -181,7 +190,6 @@ export default function QuestionPage({questionIndex, nextStep}) {
         </div>
 
         <Image className=' absolute bottom-10 translate-y-1/2 pointer-events-none ' src={bottomImg} alt='bottomImg' />
-        {/* <Image className=' absolute bottom-0 translate-y-1/2 ' src={circle2Img} alt='circle2Img' /> */}
         
       </MobileFrame>
     </>

@@ -6,7 +6,7 @@ import titleImg from '@/../public/0.start/title.svg';
 import startBtn from '@/../public/0.start/startBtn.png';
 import circle1Img from '@/../public/0.start/blur-circle-1.png';
 import topImg from '@/../public/0.start/instrument-green.png';
-import bottomImg from '@/../public/0.start/piano-green.png';
+import bottomImg from '@/../public/1.question/piano-green.png';
 
 
 export default function StartPage({nextStep}) {
@@ -14,10 +14,10 @@ export default function StartPage({nextStep}) {
   return (
     <>
       <MobileFrame bgColor="#AEAC72">
-        <div className='w-[95%] flex justify-center items-center flex-col gap-[30px] bg-[#BAB887] px-3 py-10 rounded-2xl'>
-          <Image className=' absolute top-8 -translate-y-1/2 ' src={topImg} alt='topImg' />
-          <div className='text-[#FCE3BE] font-[500] text-center text-[30px]'>你是哪一種樂器?</div>
-          <div className='text-[#FCE3BE] font-[500] text-center text-[14px]
+        <div className='w-[95%] flex justify-center items-center flex-col gap-[25px] bg-[#BAB887] px-3 py-10 lg:py-5 rounded-2xl'>
+          <Image className=' absolute top-6 -translate-y-1/2 ' src={topImg} alt='topImg' />
+          <div className='text-[#FCE3BE] font-[750] text-center text-[30px]'>𝄞 你的靈魂樂器 𝄢</div>
+          <div className='text-[#FCE3BE] font-[500] text-center text-[14px] lg:text-[16px]
            leading-loose tracking-wide '>
             有些人天生就像鋼琴，穩定又優雅； <br/>
             有些人則像小號，熱情而耀眼。 <br/>
@@ -33,7 +33,7 @@ export default function StartPage({nextStep}) {
            cursor-pointer hover:translate-y-0.5 transition'>
             開始測驗
           </div>
-          <Image className=' absolute bottom-10 translate-y-1/2 pointer-events-none ' src={bottomImg} alt='bottomImg' />
+          <Image className=' absolute bottom-10 translate-y-1/2 pointer-events-none  ' src={bottomImg} alt='bottomImg' />
         </div>
       </MobileFrame>
     </>
