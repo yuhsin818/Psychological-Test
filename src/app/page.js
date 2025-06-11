@@ -41,7 +41,7 @@ export default function Croissant() {
 
   return (
     <>
-      <div className="w-screen h-full lg:h-screen bg-gray-200 flex justify-center items-center">
+      <div className="w-screen h-full 2xl:h-screen bg-gray-200 flex justify-center items-center">
         { psyState.state == 0 && <StartPage nextStep={nextStep} />}
         { psyState.state == 1 && <QuestionPage nextStep={nextStep} questionIndex={psyState.questionState} />}
         { psyState.state == 2 && <DisplayResultPage nextStep={nextStep}/>}
