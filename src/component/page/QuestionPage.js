@@ -168,14 +168,14 @@ export default function QuestionPage({questionIndex, nextStep}) {
         >
 
         <div className={`flex flex-col items-center gap-[26px]`}>
-          <div className='w-full flex flex-col lg:flex-row justify-center items-center mb-[25px] gap-3'>
-            <div className='text-[#FFE8C9] bg-[rgba(255,232,201,0.3)] rounded-full w-[50px] h-[50px]
+          <div className='w-full flex flex-col justify-center items-center mb-[15px] gap-3'>
+            <div className='text-[#FFE8C9] bg-[rgba(255,232,201,0.3)] rounded-full aspect-square w-[50px] h-[50px]
             flex justify-center items-center font-bold text-xl'>
               Q{questionIndex+1}
             </div>
             
             <div 
-              className={`text-center font-bold text-[28px] text-[#FCE3BE]`}
+              className={`text-center font-bold text-[23px] text-[#FCE3BE]`}
             > {questionData.questions[questionIndex+1].title} </div>
             
             
@@ -187,7 +187,7 @@ export default function QuestionPage({questionIndex, nextStep}) {
           <div
             className={`
               ${currentStyle.bgColor} w-full rounded-full text-[#FFE8C9] 
-              py-[12px] text-[15px] flex justify-center items-center font-medium 
+              py-[8px] text-[15px] flex justify-center items-center font-medium 
               cursor-pointer transition-transform duration-300
               border-4 border-transparent
               hover:scale-105 hover:border-[#FCE3BE]

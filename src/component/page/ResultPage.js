@@ -92,26 +92,27 @@ export default function ResultPage() {
         }
         result_description = (woodwind - string > 2) ? '你是長笛，總愛在高空翱翔，隨時都像灑落陽光的銀河。永遠是音樂會裡那道優雅的風，來去之間，總能掀起一陣驚呼。':'你是豎笛，溫暖又百變，就像音樂界的變色龍。平時乖巧，遇到機會就開啟狂歡模式，總能在舞台上耍點小聰明。';
       } else if (secondType === 'brass') {
-        result = (woodwind - brass > 2) ? '巴松管' : '雙簧管';
-        resultImage = (woodwind - brass > 2) ? wood_result4 : wood_result3;
-        if(woodwind - brass > 2){
-          resultTag1 = '# 老靈魂';
-          resultTag2 = '# 可靠好夥伴';
-          resultTag3 = '# 不搶戲也最重要';
-        }
-        else{
-          resultTag1 = '# 神秘派對';
-          resultTag2 = '# 內心戲超多';
-          resultTag3 = '# 文青指數爆表';          
-        }
-        result_description = (woodwind - brass > 2) ?'你是巴松管，天生就自帶低沉磁場，穩如老狗。雖然話不多，卻用最沉穩的聲音，撐起整個場子，讓大家都心安。':'你是雙簧管，氣質滿分，像是話劇裡的文青主角。說話總帶點憂鬱，還帶著一絲神秘，沒有人能忽視你。';
-      } else if (secondType === 'percussion') {
         result = '薩克斯風';
         resultImage = wood_result5;
         resultTag1 = '# 不按牌理出牌';
         resultTag2 = '# 靈魂派對王';
         resultTag3 = '# 音樂夜行者';
         result_description = '你是薩克斯風，時而狂野，時而慵懶，像夜店裡的神秘舞者。總是用充滿情感的聲音，撩動人心，絕對是派對靈魂人物。';
+
+      } else if (secondType === 'percussion') {
+        result = (woodwind - percussion > 2) ? '雙簧管' : '巴松管';
+        resultImage = (woodwind - percussion > 2) ? wood_result3 : wood_result4;
+        if(woodwind - percussion > 2){
+          resultTag1 = '# 神秘派對';
+          resultTag2 = '# 內心戲超多';
+          resultTag3 = '# 文青指數爆表';          
+        }
+        else{
+          resultTag1 = '# 老靈魂';
+          resultTag2 = '# 可靠好夥伴';
+          resultTag3 = '# 不搶戲也最重要';
+        }
+        result_description = (woodwind - percussion > 2) ?'你是雙簧管，氣質滿分，像是話劇裡的文青主角。說話總帶點憂鬱，還帶著一絲神秘，沒有人能忽視你。':'你是巴松管，天生就自帶低沉磁場，穩如老狗。雖然話不多，卻用最沉穩的聲音，撐起整個場子，讓大家都心安。';
       }
     } else if (highestType === 'brass') {
       if (secondType === 'woodwind') {

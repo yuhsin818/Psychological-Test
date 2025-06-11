@@ -38,13 +38,12 @@ export default function StartPage({nextStep}) {
 
           <div className='text-[#FCE3BE] font-[500] text-center text-[14px] lg:text-[16px]
            leading-loose tracking-wide '>
+            這世界就像一場盛大的交響樂， <br/>
             有些人天生就像鋼琴，穩定又優雅； <br/>
-            有些人則像小號，熱情而耀眼。 <br/>
-            你努力練習，追求自己的旋律， <br/>
-            不論結果如何，都有屬於你的樂章。<br/>
-            <p className='mt-[20px]'>這世界就像一場盛大的交響樂， </p>
-            而你，會是其中的哪個聲部呢？ <br/>
-            總共有16種樂器等你來探索!
+            有些人則像小號，熱情而耀眼... <br/>
+            <p className='mt-[20px]'>而你，會是其中的哪個樂器呢？ </p>
+            透過接下來的10題測驗來一探究竟吧！<br/>
+            總共有16種樂器等你來探索~
           </div>
           {/* <Image onClick={nextStep} className='w-[160px]' src={startBtn} alt='startBtn' /> */}
           <div

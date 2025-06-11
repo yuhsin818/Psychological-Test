@@ -30,93 +30,93 @@ const usePsyStore = create((set) => ({
 const useQuestionStore = create((set) => ({
   questions: {
     "1":{
-      title: "你最喜歡的氛圍是？",
+      title: "你最喜歡哪種生活節奏？",
       options: [
-        {title: "悠揚細膩，像微風輕拂", value: 1, type: "woodwind"},
-        {title: "豪邁有力，充滿張力", value: 1, type: "brass"},
-        {title: "溫暖和諧，像擁抱", value: 1, type: "string"},
-        {title: "節奏明快，自由奔放", value: 1, type: "percussion"}
+        {title: "像快板樂章，我就急性子", value: 1, type: "brass"},
+        {title: "像中板，不疾不徐", value: 1, type: "string"},
+        {title: "像慢板樂章一樣，充滿細節", value: 1, type: "woodwind"},
+        {title: "像行板，固定節奏", value: 1, type: "percussion"}
       ]
     },
     "2":{
-      title: "假日的你最可能去哪裡？",
+      title: "在上台表演前，你會如何調適心態？",
       options: [
-        {title: "森林小徑散步", value: 1 , type: "woodwind"},
-        {title: "看運動賽事或演出", value: 1, type: "brass"},
-        {title: "博物館或畫廊", value: 1, type: "string"},
-        {title: "熱鬧市集或音樂節", value: 1, type: "percussion"}
+        {title: "跟朋友互相加油打氣", value: 1, type: "string"},
+        {title: "優雅地喝一口水，放鬆心情", value: 1 , type: "woodwind"},
+        {title: "瘋狂練習等一下上台的內容", value: 1, type: "percussion"},
+        {title: "緊張地到處走動", value: 1, type: "brass"}
       ]
     },
     "3":{
-      title: "面對挑戰時，你會？",
+      title: "如果要和朋友競爭，你的心態如何？",
       options: [
-        {title: "靜下心來，找平衡", value: 1 , type: "woodwind"},
-        {title: "直接正面迎戰", value: 1, type: "brass"},
-        {title: "穩扎穩打，慢慢磨合", value: 1, type: "string"},
-        {title: "即興發揮，轉換思路", value: 1, type: "percussion"}
+        {title: "不考慮那麼多，正面迎戰", value: 1, type: "brass"},
+        {title: "理性看待，用實力說話", value: 1, type: "string"},
+        {title: "順其自然", value: 1, type: "percussion"},
+        {title: "假裝和平，但其實內心超想贏", value: 1 , type: "woodwind"}
       ]
     },
     "4":{
-      title: "你最欣賞的特質？",
+      title: "你會怎麼表達自己的意見？",
       options: [
-        {title: "靈活變通", value: 1 , type: "woodwind"},
-        {title: "熱情無懼", value: 1, type: "brass"},
-        {title: "執著穩定", value: 1, type: "string"},
-        {title: "創意無窮", value: 1, type: "percussion"}
+        {title: "和他人討論後理性提出", value: 1, type: "string"},
+        {title: "配合他人的節奏，視情況", value: 1, type: "percussion"},
+        {title: "直接大聲表達", value: 1, type: "brass"},
+        {title: "自己思考很久後提出", value: 1 , type: "woodwind"}
       ]
     },
     "5":{
-      title: "你最想要的生活節奏？",
+      title: "你希望別人如何形容你？",
       options: [
-        {title: "優雅平靜，細水長流", value: 1 , type: "woodwind"},
-        {title: "熱烈有力，帶動人心", value: 1, type: "brass"},
-        {title: "緩慢踏實，與人共鳴", value: 1, type: "string"},
-        {title: "跳躍奔放，驚喜不斷", value: 1, type: "percussion"}
+        {title: "優雅、細膩", value: 1 , type: "woodwind"},
+        {title: "熱情、活潑", value: 1, type: "brass"},
+        {title: "穩定、有條理", value: 1, type: "percussion"},
+        {title: "踏實、好溝通", value: 1, type: "string"}
       ]
     },
     "6":{
-      title: "朋友遇到麻煩時，你會？",
+      title: "你會如何規劃你的工作進度？",
       options: [
-        {title: " 耐心傾聽，柔和陪伴", value: 1 , type: "woodwind"},
-        {title: "給予力量，當後盾", value: 1, type: "brass"},
-        {title: "一起面對，齊心協力", value: 1, type: "string"},
-        {title: "幫忙想點子，解決問題", value: 1, type: "percussion"}
+        {title: "排好行程，按部就班地執行", value: 1, type: "percussion"},
+        {title: "慢慢地開始，不要影響我的生活品質", value: 1 , type: "woodwind"},
+        {title: "配合同儕，一起規劃", value: 1, type: "string"},
+        {title: "最後一刻再急起直追", value: 1, type: "brass"}
       ]
     },
     "7":{
-      title: "你最喜歡的自然景色是？",
+      title: "如果要辦慶功宴，你會想去哪種場所？",
       options: [
-        {title: "風中的樹林", value: 1 , type: "woodwind"},
-        {title: "山巒壯麗", value: 1, type: "brass"},
-        {title: "寧靜湖泊", value: 1, type: "string"},
-        {title: "瀑布或潮水", value: 1, type: "percussion"}
+        {title: "異國料理餐廳", value: 1, type: "string"},
+        {title: "熱炒店", value: 1, type: "brass"},
+        {title: "火鍋店", value: 1, type: "percussion"},
+        {title: "咖啡廳", value: 1 , type: "woodwind"}
       ]
     },
     "8":{
-      title: "朋友怎麼形容你的存在？",
+      title: "你在團體中是怎樣的存在？",
       options: [
-        {title: "溫柔清新，細節控", value: 1 , type: "woodwind"},
-        {title: "光芒四射，存在感強", value: 1, type: "brass"},
-        {title: "安定踏實，讓人安心", value: 1, type: "string"},
-        {title: "充滿驚喜，隨時冒出點子", value: 1, type: "percussion"}
+        {title: "喜歡出頭，超有存在感", value: 1, type: "brass"},
+        {title: "引導大家走在正軌", value: 1, type: "percussion"},
+        {title: "注意細節，有時候鑽牛角尖", value: 1 , type: "woodwind"},
+        {title: "乖乖配合", value: 1, type: "string"}
       ]
     },
     "9":{
-      title: "如果辦一場派對，你會是？",
+      title: "如果要自己辦一場音樂會，你會最在意？",
       options: [
-        {title: "營造氛圍，細節到位", value: 1 , type: "woodwind"},
-        {title: "帶頭炒熱氣氛", value: 1, type: "brass"},
-        {title: "安排音樂，顧全每個人", value: 1, type: "string"},
-        {title: "負責驚喜橋段", value: 1, type: "percussion"}
+        {title: "觀眾都要嗨起來", value: 1, type: "brass"},
+        {title: "當天流程都沒出問題", value: 1, type: "percussion"},
+        {title: "親朋好友都有來", value: 1, type: "string"},
+        {title: "場地一定要美美的，我也是", value: 1 , type: "woodwind"}
       ]
     },
     "10":{
-      title: "你對未來最期待的是？",
+      title: "你最大的生涯目標是什麼？",
       options: [
-        {title: "與世界有細膩連結", value: 1 , type: "woodwind"},
-        {title: "讓世界記住你的聲音", value: 1, type: "brass"},
-        {title: "穩健前進，合作無間", value: 1, type: "string"},
-        {title: "自由自在，無拘無束", value: 1, type: "percussion"}
+        {title: "過充滿質感的生活", value: 1 , type: "woodwind"},
+        {title: "有良好的人際關係", value: 1, type: "string"},
+        {title: "每天都很精彩", value: 1, type: "brass"},
+        {title: "有穩定的生活", value: 1, type: "percussion"}
       ]
     }
   },
