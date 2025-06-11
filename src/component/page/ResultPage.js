@@ -308,7 +308,7 @@ export default function ResultPage() {
 
           <Image className='w-[70%] lg:w-[40%]' src={resultImage} alt='你的結果' />
 
-          <div className='w-full flex flex-col lg:flex-row justify-center items-center gap-2 text-[#FCE3BE] font-[500] text-[15px]'>
+          <div className='w-full flex flex-col 2xl:flex-row justify-center items-center gap-2 text-[#FCE3BE] font-[500] text-[15px]'>
             <div style={{ backgroundColor: hexToRgba(getBgColor()[1], 0.6) }} className='flex p-1 px-5 rounded-2xl items-center justify-center'>{resultTag1}</div>
             <div style={{ backgroundColor: hexToRgba(getBgColor()[1], 0.6) }} className='flex p-1 px-5 rounded-2xl items-center justify-center'>{resultTag2}</div>
             <div style={{ backgroundColor: hexToRgba(getBgColor()[1], 0.6) }} className='flex p-1 px-5 rounded-2xl items-center justify-center'>{resultTag3}</div>
