@@ -332,7 +332,7 @@ export default function ResultPage() {
 
  
       </div>
-      <div className='w-full flex flex-col lg:flex-row justify-center items-center gap-2 text-[#FCE3BE] font-[500] text-[15px] mt-5'>
+      <div className='w-full flex flex-row justify-center items-center gap-2 text-[#FCE3BE] font-[500] text-[15px] mt-5'>
         <a 
           href={downloadImage}
           download={downloadFileName}
