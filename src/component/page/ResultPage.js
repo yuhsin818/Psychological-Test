@@ -50,11 +50,14 @@ import downloadResult14 from '@/../public/4.result/resultImage14.png';
 import downloadResult15 from '@/../public/4.result/resultImage15.png';
 import downloadResult16 from '@/../public/4.result/resultImage16.png';
 
-
-
 import sheetImg from '@/../public/4.result/music-sheet.png';
+import BlurText from "@/component/reactBits/BlurText";
+import FadeContent from "@/component/reactBits/FadeContent";
 
 export default function ResultPage() {
+  const handleAnimationComplete = () => {
+    console.log('Animation completed!');
+  };
   const psyState = usePsyStore((state) => state);
 
   // ⭐️ 將推斷結果的邏輯封裝成函式，並回傳物件
@@ -282,8 +285,8 @@ export default function ResultPage() {
   return (
     <MobileFrame bgColor={getBgColor()[0]}>
       {/* <Image className=' absolute top-8 -translate-y-1/2 ' src={topImg} alt='topImg' /> */}
-      <div
-        className="w-[95%] flex justify-center items-center flex-col gap-[20px] px-3 py-10 lg:py-5 rounded-2xl"
+      <div 
+        className="animate-scaleUp w-[95%] flex justify-center items-center flex-col gap-[20px] px-3 py-10 lg:py-5 rounded-2xl"
         style={{
           backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url(${sheetImg.src})`,
           backgroundSize: "cover",
@@ -291,7 +294,16 @@ export default function ResultPage() {
         }}
       >
 
-          <div className='text-[#FCE3BE] font-[750] text-center text-[30px]'>{finalResult}</div>
+          {/* <div className='text-[#FCE3BE] font-[750] text-center text-[30px]'>{finalResult}</div> */}
+          <BlurText
+            text={finalResult}
+            delay={150}
+            animateBy="words"
+            direction="top"
+            onAnimationComplete={handleAnimationComplete}
+            // className="text-2xl mb-8"
+            className='text-[#FCE3BE] font-[750] text-center text-[30px]'
+          />
 
           <Image className='w-[70%] lg:w-[40%]' src={resultImage} alt='你的結果' />
 
@@ -301,10 +313,21 @@ export default function ResultPage() {
             <div style={{ backgroundColor: hexToRgba(getBgColor()[1], 0.6) }} className='flex p-1 px-5 rounded-2xl items-center justify-center'>{resultTag3}</div>
           </div>
 
-          <div className='text-[#FCE3BE] font-[500] text-center text-[14px] lg:text-[16px] lg:px-5
+          {/* <div className='text-[#FCE3BE] font-[500] text-center text-[14px] lg:text-[16px] lg:px-5
            leading-loose tracking-wide mb-[30px]'>
             {result_description}
-          </div>
+          </div> */}
+
+          <BlurText
+            text={result_description}
+            delay={150}
+            animateBy="words"
+            direction="top"
+            onAnimationComplete={handleAnimationComplete}
+            // className="text-2xl mb-8"
+            className='text-[#FCE3BE] font-[500] text-center text-[14px] lg:text-[16px] lg:px-5
+           leading-loose tracking-wide mb-[30px]'
+          />
 
  
       </div>

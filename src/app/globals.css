@@ -25,3 +25,54 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes moveDown {
+  from {
+    top: -6;
+  }
+  to {
+    top: 1.5rem; /* 因為 top-6 = 6*0.25rem = 1.5rem */
+  }
+}
+
+.animate-moveDown {
+  animation: moveDown 0.7s ease-out forwards;
+}
+
+@keyframes moveUp {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 2.5rem; /* 因為 bottom-10 = 10*0.25rem = 2.5rem */
+  }
+}
+
+.animate-moveUp {
+  animation: moveUp 0.7s ease-out forwards;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scaleUp {
+  animation: scaleUp 0.7s ease-out forwards;
+}
+
+.fade {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+

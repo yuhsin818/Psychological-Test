@@ -42,8 +42,10 @@ export default function DisplayResultPage({ nextStep }) {
         </div>
         <div
           className="bg-[#FABC63] w-[80%] rounded-full text-[#FCE3BE] 
-          py-[10px] text-[18px] flex justify-center items-center font-bold 
-          cursor-pointer hover:translate-y-0.5 transition"
+          py-[6px] text-[18px] flex justify-center items-center font-bold 
+          cursor-pointer transition-transform duration-300
+          border-4 border-transparent
+          hover:scale-105 hover:border-[#FCE3BE]"
           onClick={nextStep}
         >
           查看結果

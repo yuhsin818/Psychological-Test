@@ -25,20 +25,30 @@ import topImg4 from '@/../public/1.question/instrument-blue.png';
 import topImg5 from '@/../public/1.question/instrument-purple.png';
 
 import { usePsyStore, useQuestionStore } from '@/app/store/store'
+import { useEffect, useState } from 'react';
+
 
 
 export default function QuestionPage({questionIndex, nextStep}) {
+  const [fadeVisible, setFadeVisible] = useState(false);
+
+  useEffect(() => {
+    // 當元件初次載入時，觸發淡入效果
+    setFadeVisible(true);
+  }, []);
 
   const questionData = useQuestionStore( (state)=> state );
   const psyData = usePsyStore( (state)=> state );
 
 
   const clickAnswer = function(option){
-    nextStep();
+    
+  nextStep();
 
-    usePsyStore.getState().updateScore(option.type, option.value);
+  usePsyStore.getState().updateScore(option.type, option.value);
 
-    console.log(option.title, option.value, option.type);
+  console.log(option.title, option.value, option.type);
+      
   }
 
 
@@ -149,12 +159,15 @@ export default function QuestionPage({questionIndex, nextStep}) {
   return (
     <>
       <MobileFrame bgColor={getBgColor()}>
-        
         <Image className=' absolute top-8 lg:top-5 -translate-y-1/2 ' src={topImg} alt='topImg' />
-        
+        <div
+          className={`
+            ${fadeVisible ? 'opacity-100' : 'opacity-0'}
+            transition-opacity duration-1500
+          `}
+        >
 
-
-        <div className='flex flex-col items-center gap-[26px]'>
+        <div className={`flex flex-col items-center gap-[26px]`}>
           <div className='w-full flex flex-col lg:flex-row justify-center items-center mb-[25px] gap-3'>
             <div className='text-[#FFE8C9] bg-[rgba(255,232,201,0.3)] rounded-full w-[50px] h-[50px]
             flex justify-center items-center font-bold text-xl'>
@@ -165,6 +178,7 @@ export default function QuestionPage({questionIndex, nextStep}) {
               className={`text-center font-bold text-[28px] text-[#FCE3BE]`}
             > {questionData.questions[questionIndex+1].title} </div>
             
+            
           </div>
 
 
@@ -174,7 +188,9 @@ export default function QuestionPage({questionIndex, nextStep}) {
             className={`
               ${currentStyle.bgColor} w-full rounded-full text-[#FFE8C9] 
               py-[12px] text-[15px] flex justify-center items-center font-medium 
-              cursor-pointer hover:translate-y-0.5 transition
+              cursor-pointer transition-transform duration-300
+              border-4 border-transparent
+              hover:scale-105 hover:border-[#FCE3BE]
             `}
             onClick={() => clickAnswer(option)} //改新增項目
             key={option.title + currentStyle.keySuffix}
@@ -183,10 +199,7 @@ export default function QuestionPage({questionIndex, nextStep}) {
           </div>
         ))}
 
-          
-
-          {/* <Image src={q1Down} className='w-[88px]' alt='q1Down' /> */}
-
+        </div>
         </div>
 
         <Image className=' absolute bottom-10 translate-y-1/2 pointer-events-none ' src={bottomImg} alt='bottomImg' />
