@@ -33,9 +33,9 @@ const useQuestionStore = create((set) => ({
       title: "你最喜歡哪種生活節奏？",
       options: [
         {title: "像快板樂章，我就急性子", value: 1, type: "brass"},
-        {title: "像中板，不疾不徐", value: 1, type: "string"},
-        {title: "像慢板樂章一樣，充滿細節", value: 1, type: "woodwind"},
-        {title: "像行板，固定節奏", value: 1, type: "percussion"}
+        {title: "像中板樂章，不疾不徐", value: 1, type: "string"},
+        {title: "像慢板樂章，充滿細節", value: 1, type: "woodwind"},
+        {title: "像行板樂章，固定節奏", value: 1, type: "percussion"}
       ]
     },
     "2":{
@@ -71,7 +71,7 @@ const useQuestionStore = create((set) => ({
         {title: "優雅、細膩", value: 1 , type: "woodwind"},
         {title: "熱情、活潑", value: 1, type: "brass"},
         {title: "穩定、有條理", value: 1, type: "percussion"},
-        {title: "踏實、好溝通", value: 1, type: "string"}
+        {title: "隨和、好溝通", value: 1, type: "string"}
       ]
     },
     "6":{
@@ -97,7 +97,7 @@ const useQuestionStore = create((set) => ({
       options: [
         {title: "喜歡出頭，超有存在感", value: 1, type: "brass"},
         {title: "引導大家走在正軌", value: 1, type: "percussion"},
-        {title: "注意細節，有時候鑽牛角尖", value: 1 , type: "woodwind"},
+        {title: "注意細節，默默付出", value: 1 , type: "woodwind"},
         {title: "乖乖配合", value: 1, type: "string"}
       ]
     },
