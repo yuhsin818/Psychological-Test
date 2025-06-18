@@ -158,6 +158,10 @@ export default function QuestionPage({questionIndex, nextStep}) {
 
   return (
     <>
+      <audio autoPlay loop>
+        <source src="/0.start/symphonyBgm.mp3" type="audio/mpeg" />
+        你的瀏覽器不支援 audio 標籤
+      </audio>
       <MobileFrame bgColor={getBgColor()}>
         <Image className=' absolute top-8 lg:top-5 -translate-y-1/2 ' src={topImg} alt='topImg' />
         <div

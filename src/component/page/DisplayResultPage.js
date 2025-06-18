@@ -29,6 +29,10 @@ export default function DisplayResultPage({ nextStep }) {
 
   return (
     <MobileFrame bgColor="#AEAC72">
+       <audio autoPlay loop>
+        <source src="/0.start/WaitResultBGM.mp3" type="audio/mpeg" />
+        你的瀏覽器不支援 audio 標籤
+      </audio>
       <div className="w-full flex flex-col items-center">
         <div className="grid grid-cols-4 gap-2 w-[100%] mb-4">
           {displays.map((src, index) => (

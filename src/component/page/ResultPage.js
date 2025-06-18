@@ -285,6 +285,10 @@ export default function ResultPage() {
 
   return (
     <MobileFrame bgColor={getBgColor()[0]}>
+       <audio autoPlay loop>
+        <source src="/0.start/ResultBGM.mp3" type="audio/mpeg" />
+        你的瀏覽器不支援 audio 標籤
+      </audio>
       {/* <Image className=' absolute top-8 -translate-y-1/2 ' src={topImg} alt='topImg' /> */}
       <div 
         className="animate-scaleUp w-[95%] flex justify-center items-center flex-col gap-[20px] px-3 py-10 lg:py-5 rounded-2xl"
